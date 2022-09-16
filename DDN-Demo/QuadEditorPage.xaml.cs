@@ -26,5 +26,11 @@ namespace DDNDemo
                 imageEditor.DetectedQuadResults = results;
             }
         }
+
+        void onNormalizeClicked(object sender, EventArgs e) {
+            var quad = imageEditor.getSelectedQuadResult();
+            var result = App.ddn.normalize(data, quad);
+            Navigation.PushAsync(new ResultPage(result.image));
+        }
     }
 }

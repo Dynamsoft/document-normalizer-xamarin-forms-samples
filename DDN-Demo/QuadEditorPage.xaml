@@ -5,10 +5,22 @@
     xmlns:dynamsoft = "clr-namespace:DDNXamarin.DCE;assembly=DDN-Xamarin"
     x:Class="DDNDemo.QuadEditorPage">
     <ContentPage.Content>
+        <StackLayout>
         <dynamsoft:DCVImageEditorView
+                      HorizontalOptions="FillAndExpand"
+                             VerticalOptions="FillAndExpand"
             x:Name="imageEditor">
-
         </dynamsoft:DCVImageEditorView>
+
+            <Button
+                x:Name="normalize"
+                Clicked="onNormalizeClicked"
+                Text="Normalize"
+                HorizontalOptions="Center"
+                ></Button>
+
+        </StackLayout>
+
         
     </ContentPage.Content>
 </ContentPage>
