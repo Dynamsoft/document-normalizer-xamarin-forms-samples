@@ -1,6 +1,5 @@
 ﻿using System;
-using DDNXamarin.DCE;
-using DDNXamarin.DDN;
+using DDNXamarin;
 
 using Xamarin.Forms;
 
@@ -10,13 +9,15 @@ namespace DDNDemo
     {
         public static IDCVCameraEnhancer dce;
         public static IDocumentNormalizer ddn;
+        public static ILicenseManager licenseManager;
 
 
-        public App(IDCVCameraEnhancer enhancer, IDocumentNormalizer normalizer)
+        public App(IDCVCameraEnhancer enhancer, IDocumentNormalizer normalizer, ILicenseManager manager)
         {
             dce = enhancer;
             ddn = normalizer;
-            ddn.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this);
+            licenseManager = manager;
+            licenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this);
             MainPage = new NavigationPage(new MainPage());
         }
 

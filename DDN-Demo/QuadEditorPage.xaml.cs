@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using DDNXamarin.DDN;
+using DDNXamarin;
 using Xamarin.Forms;
 
 namespace DDNDemo
@@ -29,7 +29,7 @@ namespace DDNDemo
 
         void onNormalizeClicked(object sender, EventArgs e) {
             var quad = imageEditor.getSelectedQuadResult();
-            var result = App.ddn.normalize(data, quad);
+            var result = App.ddn.Normalize(data, quad);
             Navigation.PushAsync(new ResultPage(result.image));
         }
     }

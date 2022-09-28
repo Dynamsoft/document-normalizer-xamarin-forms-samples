@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using DDNDemo;
-using DDNXamarin.DCE;
-using DDNXamarin.DDN;
+using DDNXamarin;
 using Xamarin.Forms;
 
 namespace DDNDemo
@@ -16,8 +15,8 @@ namespace DDNDemo
         public CustomRendererPage()
         {
             InitializeComponent();
-            App.ddn.setCameraEnhancer();
-            App.ddn.addResultListener(this);
+            App.ddn.SetCameraEnhancer(App.dce);
+            App.ddn.AddResultListener(this);
         }
 
         public void DocumentResultCallback(int id, ImageData imageData, DetectedQuadResult[] documentResults)
@@ -35,14 +34,14 @@ namespace DDNDemo
 
             base.OnAppearing();
             App.dce.Open();
-            App.ddn.startDetecting();
+            App.ddn.StartDetecting();
         }
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
             App.dce.Close();
-            App.ddn.stopDetecting();
+            App.ddn.StopDetecting();
 
         }
 

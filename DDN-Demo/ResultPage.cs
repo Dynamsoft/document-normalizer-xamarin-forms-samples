@@ -1,5 +1,5 @@
 ﻿using System;
-using DDNXamarin.DDN;
+using DDNXamarin;
 using Xamarin.Forms;
 
 namespace DDNDemo
