@@ -7,12 +7,12 @@ namespace DDNDemo
 {
     public partial class App : Application, IDCVLicenseVerificationListener
     {
-        public static IDCVCameraEnhancer dce;
+        public static ICameraEnhancer dce;
         public static IDocumentNormalizer ddn;
         public static ILicenseManager licenseManager;
 
 
-        public App(IDCVCameraEnhancer enhancer, IDocumentNormalizer normalizer, ILicenseManager manager)
+        public App(ICameraEnhancer enhancer, IDocumentNormalizer normalizer, ILicenseManager manager)
         {
             dce = enhancer;
             ddn = normalizer;
