@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using DDNXamarin.iOS;
 
 namespace DDN_Demo.iOS
 {
@@ -23,7 +24,10 @@ namespace DDN_Demo.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            //LoadApplication(new App());
+            DCVCameraEnhancer dce = new DCVCameraEnhancer();
+            DCVDocumentNormalizer ddn = new DCVDocumentNormalizer();
+            DCVLicenseManager manager = new DCVLicenseManager();
+            LoadApplication(new App(dce, ddn, manager));
 
             return base.FinishedLaunching(app, options);
         }
