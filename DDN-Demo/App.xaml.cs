@@ -16,10 +16,19 @@ namespace DDNDemo
         {
             dce = enhancer;
             ddn = normalizer;
+
             licenseManager = manager;
+
             licenseManager.InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this);
             MainPage = new NavigationPage(new MainPage());
         }
+
+
+        public void LicenseVerificationCallback(bool isSuccess, string msg)
+        {
+
+        }
+
 
         protected override void OnStart()
         {
@@ -33,9 +42,6 @@ namespace DDNDemo
         {
         }
 
-        public void LicenseVerificationCallback(bool isSuccess, string msg)
-        {
-            
-        }
+
     }
 }

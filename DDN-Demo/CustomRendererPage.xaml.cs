@@ -9,8 +9,10 @@ namespace DDNDemo
 {
     public partial class CustomRendererPage : ContentPage, IDetectResultListener
     {
+
         public static ICameraEnhancer dce;
         public static IDocumentNormalizer ddn;
+
 
         public CustomRendererPage()
         {
@@ -21,7 +23,9 @@ namespace DDNDemo
 
         public void DetectResultCallback(int id, ImageData imageData, DetectedQuadResult[] quadResults)
         {
-            if (imageData != null)
+
+            if (imageData != null && quadResults != null)
+
             {
 
                 Device.BeginInvokeOnMainThread(async () => {

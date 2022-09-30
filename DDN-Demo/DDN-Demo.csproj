@@ -16,8 +16,10 @@
     <PackageReference Include="DDN-Xamarin" Version="1.0.0-beta.67" />
     <PackageReference Include="DDNXamarin.Nuget" Version="1.0.0-beta.70" />
   </ItemGroup>
+
   <ItemGroup>
     <None Remove="DDN-Xamarin" />
-    <None Remove="DDNXamarin.Nuget" />
+    <None Remove="DDNXamarin" />
+
   </ItemGroup>
 </Project>

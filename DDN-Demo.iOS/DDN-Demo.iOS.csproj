@@ -126,11 +126,11 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\DDNDemo\DDNDemo.csproj">
-      <Project>{8D0075A5-DCEC-4F3C-84DD-10B0A96BE79D}</Project>
-      <Name>DDNDemo</Name>
+    <ProjectReference Include="..\DDN-Demo\DDN-Demo.csproj">
+      <Project>{0BE8AB0E-8337-4547-A26B-1B58A601217F}</Project>
+      <Name>DDN-Demo</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
