@@ -10,6 +10,9 @@ namespace DDNDemo
         {
             Content = new StackLayout
             {
+                Margin = new Thickness(20),
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.FillAndExpand,
                 Children = {
                     new Image {Source = data.toImageSource()}
                 }
