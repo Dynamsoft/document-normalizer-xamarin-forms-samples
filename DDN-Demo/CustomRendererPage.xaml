@@ -6,13 +6,12 @@
     x:Class="DDNDemo.CustomRendererPage">
     <ContentPage.Content>
         <AbsoluteLayout>
-
-        <dynamsoft:DCVCameraView></dynamsoft:DCVCameraView>
-            <Button
-                x:Name="capture"
-                Text="Capture"
-                HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnButtonClicked"
-                ></Button>
+            <dynamsoft:DCVCameraView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+            </dynamsoft:DCVCameraView>
+            <Button x:Name="capture" Text="Capture"
+                    AbsoluteLayout.LayoutBounds="0.5,0.5,100,30" AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Clicked="OnButtonClicked">
+            </Button>
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

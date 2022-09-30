@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace DDN_Demo.iOS
+namespace DDNDemo.iOS
 {
     public class Application
     {

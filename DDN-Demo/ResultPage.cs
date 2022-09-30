@@ -11,7 +11,7 @@ namespace DDNDemo
             Content = new StackLayout
             {
                 Children = {
-                    new Image {Source = data.imageSource}
+                    new Image {Source = data.toImageSource()}
                 }
             };
         }

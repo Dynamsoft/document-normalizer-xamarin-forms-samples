@@ -7,10 +7,8 @@ using Xamarin.Forms;
 
 namespace DDNDemo
 {
-    public partial class CustomRendererPage : ContentPage, IDocumentResultListener
+    public partial class CustomRendererPage : ContentPage, IDetectResultListener
     {
-        public static IDCVCameraEnhancer dce;
-        public static IDocumentNormalizer ddn;
 
         public CustomRendererPage()
         {
@@ -19,12 +17,13 @@ namespace DDNDemo
             App.ddn.AddResultListener(this);
         }
 
-        public void DocumentResultCallback(int id, ImageData imageData, DetectedQuadResult[] documentResults)
+        public void DetectResultCallback(int id, ImageData imageData, DetectedQuadResult[] quadResults)
         {
-            if (imageData !=null) {
+            if (imageData != null && quadResults != null)
+            {
 
-                Device.BeginInvokeOnMainThread(async ()=> {
-                    await Navigation.PushAsync(new QuadEditorPage(imageData, documentResults));
+                Device.BeginInvokeOnMainThread(async () => {
+                    await Navigation.PushAsync(new QuadEditorPage(imageData, quadResults));
                 });
             }
         }
@@ -46,7 +45,7 @@ namespace DDNDemo
         }
 
         void OnButtonClicked(object sender, EventArgs e) {
-            App.ddn.fetchResult();
+            App.ddn.EnableReturnImageOnNextCallback();
         }
     }
 }
