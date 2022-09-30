@@ -8,13 +8,18 @@ namespace DDNDemo
     {
         public ResultPage(ImageData data)
         {
+            Image image = new Image { Source = data.toImageSource() };
+            if (Device.RuntimePlatform == Device.iOS)
+            {
+                image.RotateTo(data.orientation);
+            }
             Content = new StackLayout
             {
                 Margin = new Thickness(20),
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 Children = {
-                    new Image {Source = data.toImageSource()}
+                    image
                 }
             };
         }
