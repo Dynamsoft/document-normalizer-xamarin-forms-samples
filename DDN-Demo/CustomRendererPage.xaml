@@ -9,7 +9,7 @@
             <dynamsoft:DCVCameraView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
             </dynamsoft:DCVCameraView>
             <Button x:Name="capture" Text="Capture"
-                    AbsoluteLayout.LayoutBounds="0.5,0.5,100,30" AbsoluteLayout.LayoutFlags="PositionProportional"
+                    AbsoluteLayout.LayoutBounds="0.5,0.5,120,50" AbsoluteLayout.LayoutFlags="PositionProportional"
                     Clicked="OnButtonClicked">
             </Button>
         </AbsoluteLayout>
