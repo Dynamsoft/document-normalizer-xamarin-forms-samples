@@ -14,7 +14,7 @@
                 x:Name="normalize"
                 Clicked="onNormalizeClicked"
                 Text="Normalize"
-                AbsoluteLayout.LayoutBounds="0.5,0.5,100,30"
+                AbsoluteLayout.LayoutBounds="0.5,0.5,120,50"
                 AbsoluteLayout.LayoutFlags="PositionProportional">
             </Button>
 
