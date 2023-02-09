@@ -9,10 +9,6 @@ namespace DDNDemo
         public ResultPage(ImageData data)
         {
             Image image = new Image { Source = data.ToImageSource() };
-            if (Device.RuntimePlatform == Device.iOS)
-            {
-                image.RotateTo(data.orientation);
-            }
             Content = new StackLayout
             {
                 Margin = new Thickness(20),
